@@ -51,6 +51,10 @@
 		<div id="cover">
 			
 		</div>
+		<div id="startImg" class="mui-card" style="height: 90%;left:0;top: 35px;;z-index: 99;position: absolute;width: 100%;margin-left: 0;">		
+				<img src="./img/index.jpg" style="height: 100%;width: 100%;" alt="" />
+		</div>
+		
 		<div class="mui-card" style="height: 90%;margin: 0;top: 45px;;z-index: 1;">
 			<div class="mui-card-header mui-card-media" style="padding-left: 0;margin-left: 0;height: 15%;">
 				<div id="title"  class="mui-media-body" style="padding-left: 0;margin-left: 15px;font-weight:bold;font-size: 15pt;color: #007aff;padding-top: 10px;">
@@ -109,7 +113,13 @@
 			
 			</div>
 		</div>
-		<div class="mui-card-footer" style="height: 8%;bottom: 0;position: absolute;width: 100%;background-color: whitesmoke;font-weight:bold;box-shadow: 0 0 5px 0;z-index: 9998;font-size: 14pt;">
+		<div id="startinto" class="mui-card-footer" style="height: 8%;bottom: 0;position: absolute;width: 100%;background-color: whitesmoke;font-weight:bold;box-shadow: 0 0 5px 0;z-index: 9998;font-size: 14pt;">
+			<a onclick="into();" class="mui-card-link btn" style="text-align: center;margin: auto;">点击进入</a>	
+		</div>
+		<div id="startcp" class="mui-card-footer" style="height: 8%;bottom: 0;position: absolute;width: 100%;background-color: whitesmoke;font-weight:bold;box-shadow: 0 0 5px 0;z-index: 9997;font-size: 14pt;">
+			<a onclick="cpstart();" class="mui-card-link btn" style="text-align: center;margin: auto;">开始测评</a>	
+		</div>
+		<div class="mui-card-footer" style="height: 8%;bottom: 0;position: absolute;width: 100%;background-color: whitesmoke;font-weight:bold;box-shadow: 0 0 5px 0;z-index: 9996;font-size: 14pt;">
 			<a onclick="$('#cover').show();turnPage(0);" class="mui-card-link btn">上一题</a>
 			<a onclick="submit();" class="mui-card-link btn">确&nbsp;&nbsp;&nbsp;&nbsp;定</a>
 			<a id="next" onclick="$('#cover').show();turnPage(1);" class="mui-card-link btn">下一题</a>
@@ -121,6 +131,7 @@
 			<button id="change_btn" type="button" class="mui-btn mui-btn-blue mui-btn-block" style="border-radius: 0;height: 50px;padding: 0;length:100%"></button>
 		</div> -->
 		<script src="./js/quetion.js"></script>
+		<script src="./js/function.js"></script>
 		<script src="./js/jquery_1.9.1.js"></script>
 		<script src="./js/mui.js"></script>
 		<script type="text/javascript">
@@ -342,6 +353,7 @@
 					if(tizhi_num_9>=17&&tizhi_num_1<=8&&tizhi_num_2<=8&&tizhi_num_3<=8&&tizhi_num_4<=8&&tizhi_num_5<=8&&tizhi_num_6<=8&&tizhi_num_7<=8&&tizhi_num_8<=8){
 						result_con+="<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;您的体质是平和质。";
 						img_con="<img src=\"./img/9.png\" alt=\"\" width=\"100%\"/>";
+						img_con+="<img src=\"./img/code.png\" alt=\"\" width=\"100%\"/>";
 						$("#result_img").html(img_con);
 						
 					}else if(tizhi_num_9>=17&&tizhi_num_1<=10&&tizhi_num_2<=10&&tizhi_num_3<=10&&tizhi_num_4<=10&&tizhi_num_5<=10&&tizhi_num_6<=10&&tizhi_num_7<=10&&tizhi_num_8<=10){
@@ -356,6 +368,7 @@
 						if(tizhi_num_6>=9){jibenshi_num+=1;if(jibenshi_num>0){result_con+=",血瘀质";}else{result_con+=",倾向是血瘀质"};img_con+="<img src=\"./img/6.png\" alt=\"\" width=\"100%\"/>";}
 						if(tizhi_num_7>=9){jibenshi_num+=1;if(jibenshi_num>0){result_con+=",气郁质";}else{result_con+=",倾向是气郁质"};img_con+="<img src=\"./img/7.png\" alt=\"\" width=\"100%\"/>";}
 						if(tizhi_num_8>=9){jibenshi_num+=1;if(jibenshi_num>0){result_con+=",特禀质。";}else{result_con+=",倾向是特禀质"};img_con+="<img src=\"./img/8.png\" alt=\"\" width=\"100%\"/>";}
+						img_con+="<img src=\"./img/code.png\" alt=\"\" width=\"100%\"/>";
 						$("#result_img").html(img_con);
 					}else{
 						var tizhi_is="";
@@ -388,6 +401,7 @@
 						}else if(tizhi_is==""&&tizhi_like!=""){
 							result_con+="<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;您的体质倾向是"+tizhi_like+"。";
 						}
+						img_con+="<img src=\"./img/code.png\" alt=\"\" width=\"100%\"/>";
 						$("#result_img").html(img_con);
 						
 					}
