@@ -138,6 +138,17 @@
 		
 			//全局变量
 			
+			
+			//微信访问校验
+			var ua = navigator.userAgent.toLowerCase();
+			var isWeixin = ua.indexOf("\'micromessenger\'")!= -1;
+			console.log(ua,isWeixin);
+			var key = getParam("key");
+			console.log("key==="+key);
+			if(isWeixin==0&&key!="jx"){	//非微信，跳转
+				window.location.href="404.html";
+			}
+			
 			//当前题号
 			var item_no=0;	//	当前题号
 			var item_re_no=0;	//	之前题号
@@ -417,6 +428,21 @@
 			// document.getElementById("toastBtn").addEventListener('tap', function() {
 			// 	mui.toast('欢迎体验Hello MUI');
 			// });
+			
+			function GetUrl(){
+				var url = document.location.toString();
+				var arrUrl=url.split("?");
+				var para = arrUrl[1];
+				return(para);
+			}
+			function getParam(name) {  
+				
+				console.log(name);
+			    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");  
+			　　//search,查询？后面的参数，并匹配正则
+			    var r = location.search.substr(1).match(reg);  
+			　　if (r != null) return decodeURI(decodeURI(r[2])); 
+			}
 			
 		    </script>  
 	
