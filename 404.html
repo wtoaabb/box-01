@@ -8,6 +8,7 @@
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
+	
 	<body>
 
 		<!-- Wrapper -->
@@ -43,7 +44,7 @@
 	
 				<!-- Footer -->
 					<footer id="footer">
-						<p class="copyright">&copy; JiangXia. Design: <a href="https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzI2ODEzNjM4NA==#wechat_redirect">公众号</a>.</p>
+						<p class="copyright">&copy; JiangXia. Design: <a href="weixin://">公众号</a>.</p>
 					</footer>
 
 			</div>
@@ -52,10 +53,25 @@
 			<div id="bg"></div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
+			<!-- <script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			
+			<button onclick="copyToClipboard()">点击复制微信代码</button>
+			<p id="wechatCode">这里放置需要复制的微信代码</p>
+			<script>
+			function copyToClipboard() {
+			var copyText = document.getElementById("wechatCode");
+			var selection = window.getSelection();
+			var range = document.createRange();
+			range.selectNodeContents(copyText);
+			selection.removeAllRanges();
+			selection.addRange(range);
+			document.execCommand("copy");
+			window.location.href = "weixin://";
+			}
+			</script> -->
 
 	</body>
 </html>
